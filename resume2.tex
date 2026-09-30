@@ -1,0 +1,121 @@
+% Shravan Kumar - Cloud & DevOps Engineer Resume
+% Compile with pdfLaTeX on Overleaf.
+
+\documentclass[a4paper,10pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{a4paper,top=0.58in,bottom=0.58in,left=0.65in,right=0.65in}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+\urlstyle{same}
+
+\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+\setlist[itemize]{
+  leftmargin=1.35em,
+  topsep=3pt,
+  partopsep=0pt,
+  parsep=0pt,
+  itemsep=2pt
+}
+
+\newcommand{\skill}[2]{\textbf{#1:} #2\par\vspace{0.7pt}}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries SHRAVAN KUMAR}\\[3pt]
+  \textbf{Cloud \& DevOps Engineer}\\[4pt]
+  Bengaluru, Karnataka \textbar{}
+  \href{mailto:skicodes123@gmail.com}{skicodes123@gmail.com} \textbar{}
+  \href{tel:+916361732195}{+91 636 173 2195} \textbar{}
+  \href{https://www.linkedin.com/in/ski3339}{linkedin.com/in/ski3339}
+\end{center}
+
+\section*{TECHNICAL SKILLS}
+\skill{Cloud Platforms}{AWS; Oracle Cloud Infrastructure (OCI): compute, networking, storage, IAM}
+\skill{Automation \& IaC}{Terraform, CloudFormation, Ansible, AWX, OLAM (Oracle Linux Automation Manager)}
+\skill{CI/CD}{Jenkins, GitHub Actions}
+\skill{Containerization}{Docker, Kubernetes}
+\skill{Operating Systems}{Oracle Linux (OL8/OL9), Red Hat Enterprise Linux}
+\skill{Patch \& Config Management}{OS Management Hub (OSMH): automated patching, compliance, update orchestration}
+\skill{Programming/Scripting}{Python, C, C++, Bash}
+\skill{Monitoring \& Troubleshooting}{Kernel crash analysis, performance degradation, boot failures, SSH/network issues}
+
+\section*{EXPERIENCE}
+\textbf{Cloud Support Engineer (Linux) | Oracle}\hfill\textbf{Jul 2024 -- Present}\par
+\begin{itemize}
+  \item Own end-to-end incident resolution for production Oracle Linux (OL8/OL9)
+  environments hosted on OCI, covering boot failures, SSH connectivity issues,
+  kernel crashes, and performance degradation across Sev1--Sev4 and escalated cases.
+  \item Administer and troubleshoot OCI cloud instances, ensuring availability,
+  performance, and reliability for enterprise production workloads.
+  \item Support OS Management Hub (OSMH) for automated OS patching and update
+  compliance, and operate Oracle Linux Automation Manager (OLAM), an AWX-based
+  platform, for configuration management automation.
+  \item Develop Python automation scripts to streamline internal team workflows
+  and reduce manual operational overhead.
+  \item Work independently across the full case lifecycle---triage, root cause
+  analysis, and resolution---for standard and escalated customer cases while
+  consistently meeting SLA targets.
+\end{itemize}
+
+\section*{PROJECTS}
+\textbf{Spring Boot CI/CD and GitOps Deployment on Kubernetes}
+~\href{https://github.com/shravankumarinchur/Jenkins}{\underline{(link)}}
+\hfill\textbf{Personal Project, Sep 2026}\par
+
+\begin{itemize}
+  \item Configured Jenkins to poll GitHub for changes and support manual builds;
+  built and tested a Java 17 Spring Boot application with Maven, ran SonarQube
+  analysis, and published versioned images to private Oracle Cloud Infrastructure
+  Registry (OCIR).
+  \item Connected CI to GitOps by having Jenkins commit updated image tags to
+  GitHub and configuring Argo CD auto-sync to deploy two replicas on a three-node
+  kubeadm cluster using an OCIR pull Secret and NodePort Service.
+\end{itemize}
+
+\vspace{3pt}
+\textbf{OSWatcher Analyser}\hfill\textbf{Oracle, Mar 2026}\par
+\begin{itemize}
+  \item Built a Python-based analysis tool to parse OSWatcher archive logs
+  (\texttt{oswtop}, \texttt{oswvmstat}, \texttt{oswmeminfo}) and automatically detect
+  high CPU/memory usage, rising load trends, and memory pressure.
+  \item Cut manual log analysis time from 30--60 minutes to under 2 minutes per
+  incident, accelerating root cause analysis and reducing mean time to resolution.
+\end{itemize}
+
+\vspace{3pt}
+\textbf{Linux Infrastructure Monitoring \& Alerting Pipeline}
+\hfill\textbf{Personal Project}\par
+\begin{itemize}
+  \item Designed an end-to-end monitoring pipeline combining a cron-driven shell
+  collector, an n8n automation workflow, a local LLM (Ollama/Llama 3.1), and
+  SMTP alerts to flag Linux load-average threshold breaches.
+  \item Authored an Ansible playbook to deploy the monitoring collector across
+  multiple Oracle Linux 9 hosts, standardizing rollout and configuration.
+\end{itemize}
+
+\section*{EDUCATION}
+\textbf{KLE Technological University}, Hubballi, Karnataka
+\hfill\textbf{Jan 2021 -- Jun 2024}\par
+B.E., Electronics and Communication --- CGPA: 8.20\par
+
+\section*{CERTIFICATIONS \& ACHIEVEMENTS}
+\begin{itemize}
+  \item OCI 2025 Certified Foundations Associate --- Oct 2025
+  \item The Bits and Bytes of Computer Networking --- Sep 2023
+  \item Operating Systems and You: Becoming a Power User --- Jun 2023
+  \item 3-star rank on HackerRank in SQL and C --- database querying,
+  programming, and algorithmic problem-solving.
+\end{itemize}
+
+\end{document}
